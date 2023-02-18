@@ -56,7 +56,11 @@ function getCELL(){
          }
    getCELL();
    function Mclk(Cell) {
-    console.log(Cell.innerHTML);
+    if(Cell === "") {
+        console.log("バカ");
+    }else {
+        console.log("アホ");
+    }
        }
          // try ～ catch 例外処理、エラー処理
          // イベントリスナーaddEventListener,attachEventメソッド
