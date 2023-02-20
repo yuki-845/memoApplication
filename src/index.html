@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
     <title>MemoApplication</title>
     <link rel="stylesheet" href="style1.css">
     <script src="memo.js"></script>
 
 </head>
 <body id="main">
+    
     <div id="next-prev-button">
         <button id="prev" onclick="front()">‹</button>
         <button id="next" onclick="next()">›</button>
-    </div>
     <h1 id="header"></h1>
-    <div></div>
+    
     <table class="tabler">
         <tr>
             <th id="sunday">日</th>
@@ -81,5 +89,11 @@
             <td></td>
         </tr>
     </table>
+</div>
+<section class="side">
+    <textarea name="text" id="texts" cols="45" rows="38"></textarea>
+</section>
+</div>
 </body>
+
 </html>
