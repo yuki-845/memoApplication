@@ -28,7 +28,6 @@ const createWindow = () => {
   mainWindow.on("closed", () => {
     mainWindow = null;
   });
-
 };
 
 //  初期化が完了した時の処理
@@ -41,7 +40,6 @@ app.whenReady().then(() => {
     if (BrowserWindow.getAllWindows().length === 0) {
       createWindow();
     }
-    
   });
 });
 
