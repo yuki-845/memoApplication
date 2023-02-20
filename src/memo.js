@@ -2,6 +2,9 @@ let x = 0;
 const today = new Date();
 const data = new Date();
 const da = new Date();
+import * as fs from 'fs/promises';
+const fs = require('fs');
+const { BrowserWindow, dialog } = require('electron').remote;
 let day = da.getDate();
 
 let months = data.getMonth();
@@ -35,7 +38,7 @@ function calendar() {
                 tableElements[i].style.color = 'blue';
             }
             if(years === year && month + 1 === months && count === day) {
-              tableElements[i].style.backgroundColor = "yellow";
+              tableElements[i].style.backgroundColor = "pink";
               fire = false;
             }
             
@@ -56,10 +59,9 @@ function getCELL(){
          }
    getCELL();
    function Mclk(Cell) {
-    if(Cell === "") {
-        console.log("バカ");
+    if(Cell.innerHTML === "") {
     }else {
-        console.log("アホ");
+        
     }
        }
          // try ～ catch 例外処理、エラー処理
