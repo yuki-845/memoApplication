@@ -2,9 +2,6 @@ let x = 0;
 const today = new Date();
 const data = new Date();
 const da = new Date();
-import * as fs from 'fs/promises';
-const fs = require('fs');
-const { BrowserWindow, dialog } = require('electron').remote;
 let day = da.getDate();
 
 let months = data.getMonth();
@@ -71,23 +68,33 @@ function getCELL(){
         }catch(e){
       window.attachEvent("onload",getCELL);
      }
-function next() {
-    months += 1;
-    if(months === 13) {
-        months = 1;
-        years += 1;
+     function next(a) {
+        months += 1;
+        if(months === 13) {
+            months = 1;
+            years += 1;
+        }
+        document.querySelector('#header').innerHTML = years + "年 " + (months) + "月";
+        x += 1;
+        calendar();
     }
-    document.querySelector('#header').innerHTML = years + "年 " + (months) + "月";
-    x += 1;
-    calendar();
-}
-function front() {
+    function front() {
+        
+    }
+function front(a) {
     months -= 1;
-    if(months === 0) {
-        months = 12;
-        years -= 1;
-    }
-    document.querySelector('#header').innerHTML = years + "年 " + (months) + "月";
-    x -= 1;
-    calendar();
+        if(months === 0) {
+            months = 12;
+            years -= 1;
+        }
+        document.querySelector('#header').innerHTML = years + "年 " + (months) + "月";
+        x -= 1;
+        calendar();
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('#prev').addEventListener('click', front);
+});
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('#next').addEventListener('click', next);
+});
