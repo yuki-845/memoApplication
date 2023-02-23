@@ -1,29 +1,42 @@
+#main{
+  width: 600px;
+  height: 500px;
+  display: flex;
+  justify-content: flex-start;
+}
+
 #header {
     text-align: center;
     font-size: 24px;
-    width: 100%;
-    margin: 1rem 0 0;
+    width: 400px;
+    margin: 2rem 50 10;
   }
   
   .tabler{
     border-collapse: collapse;
     border-spacing: 0px;
-    width: 100%;
+    width: 400px;
   }
-  
+  #sunday{
+    color: red;
+  }
+  #sturday{
+    color: blue;
+  }
   .tabler tr{
     border-bottom: solid 1px #eee;
   }
-  
   .tabler th,.tabler td{
     text-align: center;
-    width: 6%;
+    width: 8%;
     padding: 15px 0;
   }
   .tale{
-      border-collapse: collapse;
+    border-collapse: collapse;
     border-spacing: 0px;
-    width: 100%;
+    width: 400px;
+    height: 400px;
+    margin: 0 30px 30px 0;
   }
   .tale tr{
       text-align: center;
@@ -55,8 +68,13 @@
     border-color: #D4BB92;
   }
   #prev {
-    float: left;
+    position: absolute;
+    left: 0;
   }
   #next {
-    float: right;
+    position: absolute;
+    right: 10%;
+  }
+  #texts {
+    resize: none;
   }
